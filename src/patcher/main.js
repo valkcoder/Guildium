@@ -52,7 +52,7 @@ ipcMain.handle("guildium-enhancement-dialog", async (_, type) => {
 ipcMain.handle("guildium-no-splash-close", () => {
     require.cache[
         join(dirname(require.main.filename), "electron", "electronAppLoader.js")
-    ].exports.default.loaderWindow.close = () => {};
+    ].exports.default.loaderWindow.close = () => { };
 });
 
 app.whenReady().then(() => {
@@ -67,10 +67,9 @@ app.whenReady().then(() => {
             "api.github.com", // Github API
             "www.github.com", // Github
             "objects.githubusercontent.com", // Github (Asset)
-            "*.reguilded.dev" // ReGuilded Server
         ],
         default: [
-            "*.reguilded.dev" // ReGuilded Server
+
         ],
         font: [
             "fonts.gstatic.com", // Google Fonts

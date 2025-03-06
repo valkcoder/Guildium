@@ -43,7 +43,7 @@ export type VersionJson = {
  */
 export async function checkForUpdate(forceUpdate: boolean = false): Promise<[boolean, VersionJson]> {
     return new Promise<VersionJson>(resolve => {
-        fetch("https://api.github.com/repos/Reguilded/Reguilded/releases/latest").then(response => {
+        fetch("https://api.github.com/repos/valkcoder/Guildium/releases/latest").then(response => {
             if (!response.ok) {
                 resolve({
                     noRelease: true
