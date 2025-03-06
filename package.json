@@ -1,6 +1,6 @@
 {
     "name": "guildium",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Guildium is a client injector/client mod that allows you to extend the functionality of Guilded's client by providing theme and addon support.",
     "main": "",
     "type": "commonjs",
