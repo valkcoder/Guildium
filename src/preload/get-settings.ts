@@ -1,10 +1,10 @@
-import { GuildiumSettings, GuildiumWhitelist } from "../common/guildium-settings";
+import {GuildiumSettings, GuildiumWhitelist} from "../common/guildium-settings";
 import { defaultSettings, defaultWhitelist } from "./settings";
-import { readFileSync, promises as fsPromises } from "fs";
+import {readFileSync, promises as fsPromises } from "fs";
 import { join } from "path";
 
 /**
- * Gets the Guildium settings file. If it's not present, it gets created and default settings get returned instead.
+ * Gets the ReGuilded settings file. If it's not present, it gets created and default settings get returned instead.
  * @param settingsPath The path to settings
  * @returns Settings
  */
@@ -25,7 +25,7 @@ export default function getSettingsFile(settingsPath: string) {
                 // There are no settings, so it's the first time
                 window.isFirstLaunch = true;
 
-                // Create ~/.guildium/settings
+                // Create ~/.reguilded/settings
                 fsPromises.mkdir(settingsPath, { recursive: true }).then(async () => {
                     const settingsJson = JSON.stringify(defaultSettings, null, 4);
                     const customWhitelistJson = JSON.stringify(defaultWhitelist, null, 4);
